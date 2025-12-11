@@ -1,1 +1,1 @@
-## End to End  Machine Learnig ProjectS
+## End to End  Machine Learnig Project
