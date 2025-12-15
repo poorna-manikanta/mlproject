@@ -1,17 +1,17 @@
-from flask import Flask,request,render_template
+from flask import Flask, app,request,render_template
 import numpy as np
 import pandas as pd
 import os
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
-app=Flask(__name__)
+application=Flask(__name__)
 ## route for a homepage
-@app.route('/')
+@application.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/predictdata',methods=['GET','POST'])
+@application.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
         return render_template('home.html')
@@ -34,7 +34,7 @@ def predict_datapoint():
         return render_template('home.html',results=results[0])
     
 if __name__=="__main__":
-    app.run()
+    application.run()
 
 
     
