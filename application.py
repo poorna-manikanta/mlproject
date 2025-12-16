@@ -5,9 +5,12 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
-application = app
 
+#first create the flask app
 app=Flask(__name__)
+
+#then define the flask app
+application=app
 
 ## Route for a home page
 
@@ -40,6 +43,10 @@ def predict_datapoint():
         results=predict_pipeline.predict(pred_df)
         print("after Prediction")
         return render_template('home.html',results=results[0])
+    
+    # needed for EB Health check
+    if __name__=="__main__":
+        app.run()
 
 
     
