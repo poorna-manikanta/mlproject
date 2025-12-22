@@ -142,5 +142,9 @@ The Machine Learning application is deployed on **AWS EC2** to enable cloud-base
 
 Once deployed, the application can be accessed using the EC2 public IP address.
 
+## Demo Screenshot
+![mlproject](screenshots/mlproject_prediction
+_ui.png
+
 
 
