@@ -1,150 +1,84 @@
-## End to End  Machine Learnig Project
+# 🚀 Student Performance Prediction – End-to-End Machine Learning Project
 
+## 📌 Project Overview
+This project is a **production-ready, end-to-end Machine Learning system** designed to analyze and predict student academic performance using demographic, socio-economic, and educational factors.
 
-
-
-#  Student Performance Prediction – End-to-End ML Project with Docker & AWS
-
-##  Project Overview
-This project is an **end-to-end Machine Learning system** designed to analyze and predict student academic performance based on demographic, socio-economic, and educational factors.
-
-The project demonstrates the **complete ML lifecycle**, including:
-- Data analysis (EDA)
-- Feature engineering
-- Model training and evaluation
-- Prediction pipeline
-- Docker containerization
-- Cloud deployment on AWS
-
-This project follows **industry-level ML engineering and MLOps practices**.
+The project demonstrates the **complete ML lifecycle**, from raw data analysis to cloud deployment, following **industry-standard ML engineering and MLOps practices**.
 
 ---
 
-##  Problem Statement
-Student performance depends on multiple factors such as:
-- Gender
-- Parental education level
-- Test preparation
-- Socio-economic background
+## 🎯 Problem Statement
+Student academic performance is influenced by multiple factors such as:
+
+- Gender  
+- Parental education level  
+- Test preparation course  
+- Socio-economic background  
 
 Manual analysis of these factors is inefficient and subjective.  
-This project builds a **data-driven machine learning solution** to predict student scores and provide insights that can help educators improve learning outcomes.
+This project builds a **data-driven Machine Learning solution** to accurately predict student scores and generate actionable insights.
 
 ---
 
-##  Key Features
-- Exploratory Data Analysis (EDA)
-- Feature engineering and preprocessing
-- Multiple ML model comparison
-- Model evaluation and selection
-- Prediction pipeline
-- Docker-based containerization
-- AWS cloud deployment (EC2 + ECR)
-- Scalable and modular project structure
+## 🧠 Solution Approach
+The solution follows a **modular and scalable ML pipeline**:
+
+1. Data ingestion and validation  
+2. Exploratory Data Analysis (EDA)  
+3. Feature engineering and preprocessing  
+4. Model training, evaluation, and selection  
+5. Prediction pipeline implementation  
+6. Docker containerization  
+7. Cloud deployment on AWS  
 
 ---
 
-##  Exploratory Data Analysis (EDA)
-
-EDA was performed to understand data distributions, relationships, and key influencing factors.
-
-### Key Insights:
-- Parental education has a strong impact on student performance
-- Students completing test preparation perform better
-- Math, reading, and writing scores are highly correlated
-- Gender-based differences observed in certain subjects
-
-### Techniques Used:
-- Univariate analysis
-- Bivariate analysis
-- Correlation heatmaps
-- Distribution plots
+## 🔑 Key Features
+- 📊 Comprehensive Exploratory Data Analysis (EDA)
+- 🛠️ Feature engineering & preprocessing
+- 🤖 Multiple ML model comparison
+- 📈 Model evaluation using R², MAE, RMSE
+- 🔄 End-to-end prediction pipeline
+- 🐳 Dockerized application
+- ☁️ AWS cloud deployment (EC2 + ECR)
+- 🧩 Modular & scalable project structure
 
 ---
 
-##  Data Preprocessing
-- Handling missing values
-- Encoding categorical variables
-- Feature scaling
-- Train-test split
-- Pipeline-based preprocessing for consistency
-
----
-
-##  Machine Learning Models Used
-Multiple regression models were trained and evaluated:
-
+## 🧪 Machine Learning Models Used
 - Linear Regression
-- Ridge Regression
-- Lasso Regression
-- K-Nearest Neighbors (KNN)
+- Ridge & Lasso Regression
 - Decision Tree Regressor
 - Random Forest Regressor
-- AdaBoost Regressor
-- XGBoost Regressor
-- CatBoost Regressor
+- XGBoost
+- CatBoost
 
 ---
 
-##  Model Evaluation
-Models were evaluated using:
-- R² Score
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-
-### Best Performing Models:
-- Random Forest Regressor
-- XGBoost Regressor
-- CatBoost Regressor
-
-The final model was selected based on accuracy, robustness, and generalization ability.
-
----
-
-##  Prediction Pipeline
-- Raw input data is preprocessed using the same pipeline as training
-- Trained model is serialized using `joblib`
-- Predictions are generated consistently for new inputs
-- Ready for API or UI-based inference
-
----
-
-##  Docker Deployment
-
-Docker is used to containerize the ML application to ensure consistency across environments.
-
-### Why Docker?
-- Avoids “it works on my machine” issues
-- Packages code, dependencies, and model together
-- Simplifies cloud deployment
-
-### Docker Workflow:
-1. Create a Dockerfile
-2. Build Docker image locally
-3. Test container locally
-4. Push image to AWS Elastic Container Registry (ECR)
-
-Example commands:
+## 🗂️ Project Structure
 ```bash
-docker build -t student-performance-ml .
-docker run -p 8080:8080 student-performance-ml
+├── data/
+├── notebooks/
+├── src/
+│   ├── components/
+│   ├── pipelines/
+│   └── utils/
+├── templates/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── setup.py
+└── README.md
 
-## ☁️ AWS EC2 Deployment
+## 📸 Application Screenshots
+Screenshots below showcase the complete workflow of the application, from user input to real-time model predictions.
 
-The Machine Learning application is deployed on **AWS EC2** to enable cloud-based model inference and remote access.
+### 🏠 Home Page
+![Home Page](Screenshots/home_page.png)
 
-- An **EC2 instance** was provisioned to host the application
-- Docker was installed and configured on the EC2 instance
-- The Dockerized ML application was pulled from **Amazon ECR**
-- The application runs inside a container on EC2
-- EC2 **security groups** were configured to allow external access
-- The deployment ensures scalability, portability, and reliability
+### 📝 Project  Structure 
+![Structure](Screenshots/mlproject_structure.png)
 
-Once deployed, the application can be accessed using the EC2 public IP address.
-
-## Demo Screenshot
-![mlproject](screenshots/mlproject_prediction
-_ui.png
-
-
+### 📊 Prediction Output
+![Prediction Output](Screenshots/prediction_output.png)
 
